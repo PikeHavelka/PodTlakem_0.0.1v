@@ -1,0 +1,49 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.our-services {
+  background-color: $section-bg1;
+  padding-bottom: 5rem;
+
+  .header {
+    @include HeaderOfSection;
+  }
+
+  .cards-container-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+    .card {
+      display: flex;
+      @include FlexDirectionColumn;
+      gap: 1rem;
+      
+      flex: 1 1 30%;
+
+      font-size: .9rem;
+      padding: 1rem;
+      border: 1px solid $decoration;
+      background-color: $section-bg2;
+
+      span {
+        color: $decorative;
+        font-weight: bold;
+      }
+
+      .text {
+        font-weight: 300;
+      }
+
+      .price {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .our-services .cards-container-row .card {
+    min-width: fit-content;
+  }
+}

@@ -1,0 +1,108 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+form {
+  h1 {
+    @include clamp-font-size(1.3rem, 3.5vw, 1.6rem);
+    color: $fourth-color;
+    text-align: center;
+  }
+
+  .text-inputs {
+    display: flex;
+    position: relative;
+    gap: 1.2rem;
+
+    margin-top: 2rem;
+
+    input:not(input[type="submit"]) {
+      background: none;
+      border: none;
+      outline: none;
+
+      height: 2.5rem;
+      width: 33%;
+
+      padding: .3rem;
+
+      font-size: .9rem;
+      font-weight: 300;
+
+      color: $fourth-color;
+      border-bottom: 2px solid $fourth-color;
+
+      &:focus {
+        border-bottom: 2px solid $decorative;
+      }
+    }
+  }
+
+  textarea {
+    display: block;
+
+    padding: .3rem;
+    margin-top: 1.2rem;
+
+    width: 100%;
+    height: 7rem;
+
+    font-size: .9rem;
+    font-weight: 300;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: $fourth-color;
+    border-bottom: 2px solid $fourth-color;
+
+    &:focus {
+      border-bottom: 2px solid $decorative;
+    }
+  }
+
+  input[type="submit"] {
+    display: block;
+
+    margin-top: 1.2rem;
+    padding: .5rem 1.8rem;
+
+    border-radius: 25px;
+    border: none;
+
+    color: $fourth-color;
+    background-color: $decorative;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $decorative-hover;
+    }
+  }
+
+  .red {
+    color: red !important;
+  }
+}
+
+@media (max-width: calc((740px / 16px) * 1rem)) {
+  form {
+    .text-inputs {
+      @include FlexDirectionColumn;
+      align-items: center;
+
+      input:not(input[type="submit"]) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: calc((620px / 16px) * 1rem)) {
+  form input[type="submit"] {
+    margin: 1.2rem auto 0 auto;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}

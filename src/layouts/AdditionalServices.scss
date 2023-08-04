@@ -1,0 +1,31 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.additional-services {
+  padding-bottom: 5rem;
+
+  .header {
+    @include HeaderOfSection;
+  }
+
+  .work-list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: calc((865px / 16px) * 1rem)) {
+  .additional-services .work-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: calc((580px / 16px) * 1rem)) {
+  .additional-services .work-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

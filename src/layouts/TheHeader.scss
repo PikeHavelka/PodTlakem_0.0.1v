@@ -1,0 +1,177 @@
+@import "../partials/mixins";
+@import "../partials//variables";
+
+header {
+  position: relative;
+  background: url("../assets//images/header-bg.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+
+  height: 100vh;
+
+  .overlay {
+    height: 100vh;
+    background-color: $overlay;
+    
+    .sub-title-container {
+      @include FlexBoxCenter;
+      @include FlexDirectionColumn;
+      height: 100vh;
+
+      color: $title-subtitle;
+      
+      @include clamp-font-size(.7rem, 3vw, 3.2rem);
+      @include clamp-letter-spacing(.2rem, 1.8vw, 1rem);
+      @include clamp-line-height(2.1rem, 5.5vw, 4.5rem);
+      white-space: nowrap;
+      
+      h1 {
+        text-transform: uppercase;
+        padding: 0 1rem;
+      }
+      
+      h3 {
+        @include clamp-font-size(.8rem, 2vw, 1.2rem);
+        @include clamp-letter-spacing(.1rem, 1vw, .7rem);
+        font-weight: 300;
+        padding: 0 1rem;
+      }
+
+      .subtitle-brake-top.subtitle-brake-top {
+        content: "| "
+      }
+    }
+  }
+
+  .svg-container {
+    position: absolute;
+    height: 23%;
+    width: 100%;
+    bottom: 0;
+
+  }
+
+  svg {
+    position: absolute;
+
+    height: 100%;
+    width: 98%;
+    fill: $svg-bg;
+
+
+  }
+
+  .mouse-icon {
+    display: block;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+  
+    border: 2px solid $mouse-animation;
+    border-radius: 1rem;
+  
+    height: 2.5rem;
+    width: 1.5rem;
+  
+    bottom: 5.5rem;
+    margin: auto;
+  
+    .wheel {
+      position: relative;
+      top: .25rem;
+    
+      border-radius: .625rem;
+      background: $mouse-animation;
+    
+      width: .125rem;
+      height: .37rem;
+    
+      margin-left: auto;
+      margin-right: auto;
+    
+      animation: drop 1.4s linear infinite running;
+        -webkit-animation: drop 1.4s linear infinite running;
+        -moz-animation: drop 1.4s linear infinite running;
+    }
+  }
+}
+
+// Animation for Mouse Icon Wheel
+@keyframes drop {
+  0% {
+    top: .31rem;
+    opacity: 0;
+  }
+  30% {
+    top: .62rem;
+    opacity: 1;
+  }
+  100% {
+    top: 1.25rem;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes drop {
+  0% {
+    top: .31rem;
+    opacity: 0;
+  }
+
+  30% {
+    top: .62rem;
+    opacity: 1;
+  }
+
+  100% {
+    top: 1.25rem;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: .31rem;
+    opacity: 0;
+  }
+
+  30% {
+    top: .62rem;
+    opacity: 1;
+  }
+
+  100% {
+    top: 1.25rem;
+    opacity: 0;
+  }
+}
+
+@-o-keyframes drop {
+  0% {
+    top: .31rem;
+    opacity: 0;
+  }
+
+  30% {
+    top: .62rem;
+    opacity: 1;
+  }
+
+  100% {
+    top: 1.25rem;
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: calc((530px / 16px) *1rem)) {
+  header .overlay .sub-title-container .subtitle-brake-bot {
+    display: block;
+    text-align: center;
+  }
+
+  header .overlay .sub-title-container .subtitle-brake-top {
+    display: block;
+    text-align: center;
+  }
+}

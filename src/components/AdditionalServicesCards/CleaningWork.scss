@@ -1,0 +1,6 @@
+@import "../../partials/mixins";
+@import "../../partials/variables";
+
+.cleaning-work {
+  @include AdditionalServicesBox;
+}

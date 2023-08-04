@@ -1,0 +1,43 @@
+@import "../src/partials/variables";
+@import "../src/partials/mixins";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  color: $general-color;
+  line-height: 1.5;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: calc((1100px / 16px) * 1rem);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: $decoration;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $decorative;
+}
+
+// !!! EVERY COMPONENT BLOCK SETTINGS - GLOBAL !!!
+section:not(main > *) {
+  @include GeneralSectionSettings;
+}
+
+// * {
+//   outline: 1px solid red;
+// }

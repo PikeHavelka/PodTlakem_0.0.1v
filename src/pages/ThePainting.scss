@@ -1,0 +1,10 @@
+@import "../partials/variables";
+
+.protective-spraying,
+.spraying-facades {
+  background-color: $section-bg1;
+}
+
+.protective-spraying .note {
+  color: $note-color;
+}

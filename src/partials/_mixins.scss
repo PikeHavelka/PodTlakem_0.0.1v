@@ -1,0 +1,106 @@
+@mixin FlexBoxCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin FlexDirectionColumn {
+  flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+}
+
+@mixin HeaderOfSection {
+  text-align: center;
+  padding: 2rem 0 3.5rem;
+
+  h1 {
+    @include clamp-font-size(1rem, 9vw, 2.85rem);
+  }
+
+  h3 {
+    font: {
+      weight: 300;
+      size: .9rem;
+    }
+  }
+}
+
+// Import in 6 Additional Services
+@mixin AdditionalServicesBox {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: .5rem;
+  padding: 1.2rem;
+  border: 1px solid $decoration;
+
+  img {
+    max-width: 2.9rem;
+  }
+
+  h2 {
+    font: {
+      size: 1rem;
+      weight: 500;
+    }
+  }
+
+  a {
+    font: {
+      weight: 300;
+      size: .8rem;
+    }
+
+    text-decoration: none;
+    color: $decorative;
+  }
+}
+
+// Import in index.scss
+@mixin GeneralSectionSettings {
+  padding: 4rem 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  
+  .block-one,
+  .block-two,
+  .block-three,
+  .block-four,
+  .block-five,
+  .block-six,
+  .block-seven,
+  .block-eight,
+  .block-nine,
+  .block-ten {
+    border: 1px solid $section-text-deco;
+    padding: 2rem 2rem;
+    
+    section .heading, p {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      strong {
+        color: $section-text-deco;
+      }
+    }
+  }
+}
+
+@mixin OpacityText {
+  color: $fourth-color;
+  opacity: .6;
+}
+
+@mixin clamp-font-size($min, $current, $max) {
+  font-size: clamp(#{$min}, #{$current}, #{$max});
+}
+
+@mixin clamp-letter-spacing($min, $current, $max) {
+  letter-spacing: clamp(#{$min}, #{$current}, #{$max});
+}
+
+@mixin clamp-line-height($min, $current, $max) {
+  line-height: clamp(#{$min}, #{$current}, #{$max});
+}

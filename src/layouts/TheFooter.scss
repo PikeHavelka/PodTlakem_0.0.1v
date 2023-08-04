@@ -1,0 +1,97 @@
+@import "../partials/mixins";
+@import "../partials/variables";
+
+footer {
+  background: url("../assets/images/footer-bg.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  
+  .overlay {
+    padding: 2rem 0 3.5rem;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .header {
+    text-align: center;
+    padding: 3rem 0 2.5rem;
+
+    h1 {
+      color: $fourth-color;
+      @include clamp-font-size(1rem, 3vw, 1.2rem);
+    }
+  }
+
+  .brands {
+    @include FlexBoxCenter;
+    gap: 1rem;
+
+    .oneBrand {
+      
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .contact-row {
+    @include FlexBoxCenter;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10rem;
+    
+    margin-top: 2.5rem;
+
+    h4 {
+      color: $fourth-color;
+    }
+
+    a {
+      @include OpacityText;
+      text-decoration: none;
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    @include FlexDirectionColumn;
+    gap: 1.5rem;
+
+    font-size: .9rem;
+
+    p {
+      @include OpacityText;
+    }
+  }
+
+  .footer {
+    border-top: 1px solid #ffffff80;
+
+    margin-top: 3rem;
+    padding-top: 1rem;
+
+    font-size: 80%;
+
+    p {
+      @include OpacityText;
+    }
+
+    a {
+      @include OpacityText;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: calc((620px / 16px) * 1rem)) {
+  footer .contact-row {
+    @include FlexDirectionColumn;
+    align-items: center;
+    gap: 1rem;
+
+    .contact-info {
+      text-align: center;
+    }
+  }
+}
