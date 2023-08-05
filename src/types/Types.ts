@@ -16,18 +16,8 @@ export interface CardProps {
   handlePointerDown: () => void
   handlePointerUp: () => void
   handleMouseLeave: () => void
-  handleMouseMove: (arg: React.MouseEvent) => void
+  handleMouseMoveFactory: (
+    clip: HTMLDivElement | null,
+    circle: HTMLDivElement | null,
+    img: HTMLDivElement | null)  => (e: React.MouseEvent) => void
 }
-
-export interface RefCardProps extends CardProps {
-  refImgDivContainer: React.RefObject<HTMLDivElement>
-  refCircleDiv: React.RefObject<HTMLDivElement>
-  refClipDiv: React.RefObject<HTMLDivElement>
-}
-
-export interface Cards2 extends CardProps {
-  refImgDivContainer2: React.RefObject<HTMLDivElement>
-  refCircleDiv2: React.RefObject<HTMLDivElement>
-  refClipDiv2: React.RefObject<HTMLDivElement>
-}
-
