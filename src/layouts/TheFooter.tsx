@@ -1,5 +1,5 @@
 import "./TheFooter.scss"
-import brands from "../data/BrandIcons"
+import brands from "../data/brandIcons"
 import ContactForm from "../components/ContactForm"
 
 function TheFooter() {

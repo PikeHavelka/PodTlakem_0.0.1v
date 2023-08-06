@@ -1,24 +1,30 @@
-import "../../layouts/ShowOurWork.scss"
+import "./CardOfCleaning.scss"
 import solar1 from "../../assets/images/plot1.jpg"
 import solar2 from "../../assets/images/plot2.jpg"
-import { CardProps } from "../../types/Types"
+import { CardProps } from "../../types/types"
 import { useRef } from "react"
+import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
 
 const CardOfCleaningSecond = (props: CardProps) => {
+  // Create refs
   const refClipDiv = useRef<HTMLDivElement>(null)
-  const refCircleDiv = useRef<HTMLDivElement>(null)
+  const refCircleDivContainer = useRef<HTMLDivElement>(null)
   const refImgDivContainer = useRef<HTMLDivElement>(null)
 
+  // Current for refs
   const clipDivCurrent = refClipDiv.current
-  const circleDivCurrent = refCircleDiv.current
+  const circleDivCurrent = refCircleDivContainer.current
   const imgDivConteinerCurrent = refImgDivContainer.current
 
-  return <div className="card-our-work" >
-    <div className="images-container" ref={refImgDivContainer} onMouseLeave={props.handleMouseLeave} onPointerUp={props.handlePointerUp} onMouseMove={props.handleMouseMoveFactory(clipDivCurrent, circleDivCurrent, imgDivConteinerCurrent)}>
+  // Destructoring of all props (only functions)
+  const { handleMouseLeave, handleMouseMoveFactory, handlePointerUp, handlePointerDown } = props
 
-      <div className="circle-with-arrows" ref={refCircleDiv} onPointerDown={props.handlePointerDown} >
-        <span className="left-arrow"></span>
-        <span className="right-arrow"></span>
+  return <div className="card-our-work" >
+    <div className="images-container" ref={refImgDivContainer} onMouseLeave={handleMouseLeave} onPointerUp={handlePointerUp} onMouseMove={handleMouseMoveFactory(clipDivCurrent, circleDivCurrent, imgDivConteinerCurrent)}>
+
+      <div className="circle-with-arrows" ref={refCircleDivContainer} onPointerDown={handlePointerDown} >
+        <IoMdArrowDropleft className="left-icon icon" />
+        <IoMdArrowDropright className="right-icon icon" />
       </div>
 
       <div className="clip-path-left" ref={refClipDiv} >
@@ -30,10 +36,10 @@ const CardOfCleaningSecond = (props: CardProps) => {
       </div>
     </div>
 
-    <div className="text">
-      <h3>Čištění kamenného plotu</h3>
+    <div className="block-of-text">
+      <h3 className="heading">Čištění kamenného plotu</h3>
 
-      <p>Zde jsme čistili přes 40 m kamenného plotu sestávajícího se ze ztraceného bednění. Přizpůsobili jsme technologii práce tak, aby zde nedošlo k poškození dřevěného plotu a dále nekontrolovatelnému úniku látek potřebných k ošetření do půdy či rostlin zatímto plotem i přesto že naše prostředky jsou ekologicky odbouratelné.</p>
+      <p className="text">Zde jsme čistili přes 40 m kamenného plotu sestávajícího se ze ztraceného bednění. Přizpůsobili jsme technologii práce tak, aby zde nedošlo k poškození dřevěného plotu a dále nekontrolovatelnému úniku látek potřebných k ošetření do půdy či rostlin zatímto plotem i přesto že naše prostředky jsou ekologicky odbouratelné.</p>
     </div>
   </div>
 }

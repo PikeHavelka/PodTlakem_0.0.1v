@@ -5,24 +5,33 @@ import CardOfCleaningThird from "../components/ShowOurWorkCards/CardOfCleaningTh
 import { useState, useRef } from "react"
 
 function ShowOurWork() {
+  // Create useState
   const [isDraggging, setIsDragging] = useState<boolean>()
+
+  // Create refs
   const refShowOurWork = useRef<HTMLDivElement>(null)
+
+  // Current for refs
   const showOurWorkCurrent = refShowOurWork.current
 
+  // When click on element
   const handlePointerDown = () => {
     setIsDragging(true)
     if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "none"
   }
 
+  // When stop click on element
   const handlePointerUp = () => {
     setIsDragging(false)
   }
 
+  // When leave element
   const handleMouseLeave = () => {
     setIsDragging(false)
     if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto"
   }
 
+  // Accepts refs from cards component and change images
   const handleMouseMoveFactory = (
     clipDivCurrent: HTMLDivElement | null,
     circleDivCurrent: HTMLDivElement | null,

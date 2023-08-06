@@ -1,9 +1,9 @@
 import tiktok from "../assets/icons/Tt-128px.png"
 import facebook from "../assets/icons/Fb-128px.png"
 import instagram from "../assets/icons/Ig-256px.png"
-import { NavIcon } from "../types/Types"
+import { SocialIcon } from "../types/types"
 
-const navIcons: NavIcon[] = [
+const navIcons: SocialIcon[] = [
   {
     id: 0,
     name: tiktok,

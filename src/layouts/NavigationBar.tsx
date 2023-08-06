@@ -1,6 +1,6 @@
 import "./NavigationBar.scss"
 import logo from "../assets/images/logo.png"
-import navIcons from "../data/NavIcons"
+import navIcons from "../data/navIcons"
 import { useState, useEffect } from "react"
 
 function NavigationBar() {
