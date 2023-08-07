@@ -21,6 +21,22 @@ function NavigationBar() {
     })
   }, [])
 
+  const mapingSocialMedia = () => {
+    return (
+      navIcons.map((oneIcon) => {
+        const { id, name, url, alt } = oneIcon
+
+        return (
+          <li className="social-media" key={id}>
+            <a href={url}>
+              <img src={name} alt={alt} />
+            </a>
+          </li>
+        )
+      })
+    )
+  }
+
   return <nav className={`${navStyle ? "" : "transparent" }`}>
     <div className={`container flex-nav-bar ${showMenu ? "show-menu" : "hide-menu"}`}>
       <div className="company-logo">
@@ -43,17 +59,7 @@ function NavigationBar() {
         </li>
 
         <div className="all-social-media">
-          {navIcons.map((oneIcon) => {
-            const { id, name, url, alt } = oneIcon
-
-            return (
-              <li className="social-media" key={id}>
-                <a href={url}>
-                  <img src={name} alt={alt} />
-                </a>
-              </li>
-            )
-          })}
+          {mapingSocialMedia()}
         </div>
       </ul>
 
