@@ -1,4 +1,4 @@
-import "./InstallationWork.scss"
+import "./AllWorks.scss"
 import instal from "../../assets/icons/instal1.png"
 import { Link } from "react-router-dom"
 

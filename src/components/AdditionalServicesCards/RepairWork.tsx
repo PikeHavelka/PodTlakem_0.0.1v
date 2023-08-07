@@ -1,4 +1,4 @@
-import "./RepairWork.scss"
+import "./AllWorks.scss"
 import repair from "../../assets/icons/repair1.png"
 import { Link } from "react-router-dom"
 

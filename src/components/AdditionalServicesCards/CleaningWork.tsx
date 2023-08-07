@@ -1,4 +1,4 @@
-import "./CleaningWork.scss"
+import "./AllWorks.scss"
 import clean from "../../assets/icons/clean1.png"
 import { Link } from "react-router-dom"
 

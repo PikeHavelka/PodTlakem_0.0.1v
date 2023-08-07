@@ -1,6 +1,12 @@
 @import "../../partials/mixins";
 @import "../../partials/variables";
 
+// Solar panels
+.cleaning-solar-pannels,
+.cleaning-work,
+.installation-work,
+.painting-work,
+.removing-work,
 .repair-work {
   @include AdditionalServicesBox;
 }

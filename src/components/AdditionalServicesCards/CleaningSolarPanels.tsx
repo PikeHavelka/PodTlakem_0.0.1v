@@ -1,4 +1,4 @@
-import "./CleaningSolarPanels.scss"
+import "./AllWorks.scss"
 import solar from "../../assets/icons/solar1.png"
 import { Link  } from "react-router-dom"
 

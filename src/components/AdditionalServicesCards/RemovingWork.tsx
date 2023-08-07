@@ -1,4 +1,4 @@
-import "./RemovingWork.scss"
+import "./AllWorks.scss"
 import remove from "../../assets/icons/removing1.png"
 import { Link } from "react-router-dom"
 

@@ -1,4 +1,4 @@
-import "./PaintingWork.scss"
+import "./AllWorks.scss"
 import paint from "../../assets/icons/paint1.png"
 import { Link } from "react-router-dom"
 
