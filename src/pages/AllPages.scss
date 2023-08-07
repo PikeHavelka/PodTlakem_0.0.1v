@@ -1,0 +1,55 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+// Solar Cleaning page
+.performance-levels,
+.impregnation,
+.FVE,
+.price-list {
+  background-color: $section-bg1;
+}
+
+.price-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+// Error page
+.error-page {
+  text-align: center;
+  font-size: 3rem;
+}
+
+// The Cleaning
+.gutters,
+.facades,
+.decoratives {
+  background-color: $section-bg1;
+}
+
+// The Installation
+.birds-barriers,
+.lighting-conductor {
+  background-color: $section-bg1;
+}
+
+// The Painting
+.protective-spraying,
+.spraying-facades {
+  background-color: $section-bg1;
+}
+
+.protective-spraying .note {
+  color: $note-color;
+}
+
+// The Removing
+.snow-icicles {
+  background-color: $section-bg1;
+}
+
+// The Repair
+.light-shafts,
+.joints-home {
+  background-color: $section-bg1;
+}

@@ -1,4 +1,4 @@
-import "./ErrorPage.scss"
+import "./AllPages.scss"
 
 function ErrorPage() {
   return <section className="error-page">

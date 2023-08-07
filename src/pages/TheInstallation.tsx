@@ -2,7 +2,7 @@ import InstallationBlockOne from "../components/PagesBlock/InstallationBlockOne"
 import InstallationBlockTwo from "../components/PagesBlock/InstallationBlockTwo"
 import InstallationBlockThree from "../components/PagesBlock/InstallationBlockThree"
 import InstallationBlockFour from "../components/PagesBlock/InstallationBlockFour"
-import "./TheInstallation.scss"
+import "./AllPages.scss"
 
 function TheInstallation() {
   return <>

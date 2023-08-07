@@ -1,6 +1,6 @@
 import RemovingBlockOne from "../components/PagesBlock/RemovingBlockOne"
 import RemovingBlockTwo from "../components/PagesBlock/RemovingBlockTwo"
-import "./TheRemoving.scss"
+import "./AllPages.scss"
 
 function TheRemoving() {
   return <>

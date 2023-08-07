@@ -8,7 +8,7 @@ import CleaningSolarsBlockSeven from "../components/PagesBlock/CleaningSolarsBlo
 import CleaningSolarsBlockEight from "../components/PagesBlock/CleaningSolarsBlockEight"
 import CleaningSolarsBlockNine from "../components/PagesBlock/CleaningSolarsBlockNine"
 import CleaningSolarPriceList from "../components/PagesBlock/CleaningSolarPriceList"
-import "./SolarCleaning.scss"
+import "./AllPages.scss"
 
 function SolarCleaning() {
   return <>

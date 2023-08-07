@@ -5,7 +5,7 @@ import CleaningBlockFour from "../components/PagesBlock/CleaningBlockFour"
 import CleaningBlockFive from "../components/PagesBlock/CleaningBlockFive"
 import CleaningBlockSix from "../components/PagesBlock/CleaningBlockSix"
 import CleaningBlockSeven from "../components/PagesBlock/CleaningBlockSeven"
-import "./TheCleaning.scss"
+import "./AllPages.scss"
 
 function TheCleaning() {
   return <>
