@@ -6,12 +6,12 @@ import { useRef } from "react"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
 
 const CardOfCleaningSecond = (props: CardProps) => {
-  // Create refs
+  // Create Refs
   const refClipDiv = useRef<HTMLDivElement>(null)
   const refCircleDivContainer = useRef<HTMLDivElement>(null)
   const refImgDivContainer = useRef<HTMLDivElement>(null)
 
-  // Current for refs
+  // Current for Refs
   const clipDivCurrent = refClipDiv.current
   const circleDivCurrent = refCircleDivContainer.current
   const imgDivConteinerCurrent = refImgDivContainer.current

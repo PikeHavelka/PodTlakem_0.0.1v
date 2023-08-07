@@ -4,23 +4,34 @@ import navIcons from "../data/navIcons"
 import { useState, useEffect } from "react"
 
 function NavigationBar() {
+  // Create UseStates
   const [showMenu, setShowMenu] = useState<boolean>()
   const [navStyle, setNavStyle] = useState<boolean>()
 
+  // Show/Hide Hamburger Menu for small/big screen
   const hamburgerMenu = () => {
     setShowMenu(!showMenu)
   }
 
+  // NavBar change design function
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY !== 0) {
         setNavStyle(true)
       } else {
         setNavStyle(false)
       }
-    })
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
+  // Show all social icons
   const mapingSocialMedia = () => {
     return (
       navIcons.map((oneIcon) => {
