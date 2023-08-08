@@ -14,11 +14,6 @@
   margin-bottom: 3rem;
 }
 
-// Error page
-.error-page {
-  text-align: center;
-  font-size: 3rem;
-}
 
 // The Cleaning
 .gutters,
@@ -27,11 +22,13 @@
   background-color: $section-bg1;
 }
 
+
 // The Installation
-.birds-barriers,
-.lighting-conductor {
+.adds,
+.install-FVE {
   background-color: $section-bg1;
 }
+
 
 // The Painting
 .protective-spraying,
@@ -43,13 +40,22 @@
   color: $note-color;
 }
 
+
 // The Removing
 .snow-icicles {
   background-color: $section-bg1;
 }
 
+
 // The Repair
 .light-shafts,
 .joints-home {
   background-color: $section-bg1;
+}
+
+
+// Error page
+.error-page {
+  text-align: center;
+  font-size: 3rem;
 }

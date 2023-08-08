@@ -27,6 +27,7 @@
   }
 }
 
+
 // Import in 6 Additional Services
 @mixin AdditionalServicesBox {
   display: flex;
@@ -58,12 +59,16 @@
   }
 }
 
+
 // Import in index.scss
 @mixin GeneralSectionSettings {
   padding: 4rem 2rem;
+
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  
+
+  color: black;
+
   .block-one,
   .block-two,
   .block-three,
@@ -76,23 +81,45 @@
   .block-ten {
     border: 1px solid $section-text-deco;
     padding: 2rem 2rem;
-    
-    section .heading, p {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
 
-      strong {
-        color: $section-text-deco;
+    .text {
+      margin: .5rem 0 1.5rem;
+      
+      p {
+        margin-bottom: 1.5rem;
+        color: $general-color;
       }
+    }
+
+    strong {
+      color: $section-text-deco;
+    }
+
+    // CleaningSolarsBLockFour
+    .heading-family-houses {
+      margin-top: 1.5rem;
+    }
+  }
+
+  // CleaningSolarPriceList
+  .price-heading {
+    font-size: 1.5rem;
+
+    p {
+      font-size: .85rem;
+      margin-bottom: 2rem;
     }
   }
 }
+
 
 @mixin OpacityText {
   color: $fourth-color;
   opacity: .6;
 }
 
+
+// Clamps functions
 @mixin clamp-font-size($min, $current, $max) {
   font-size: clamp(#{$min}, #{$current}, #{$max});
 }
@@ -103,4 +130,53 @@
 
 @mixin clamp-line-height($min, $current, $max) {
   line-height: clamp(#{$min}, #{$current}, #{$max});
+}
+
+
+// Signpost for blocks in pages
+@mixin Signposts {
+    text-align: center;
+    background-color: $section-bg1;
+    padding: 3rem 0;
+
+    .heading {
+      text-transform: uppercase;
+
+      .subtitle {
+        margin-top: .5rem;
+        font-size: .8rem;
+        letter-spacing: .05rem;
+      }
+    }
+
+    .filter {
+      background-color: white;
+      width: 30rem;
+      margin: 3rem auto;
+      border: 1px solid $decoration;
+
+    li {
+      color: $decorative;
+      padding: 1rem 0 0 .5rem;
+      list-style-type: none;
+      text-align-last: left;
+
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $decorative;
+
+        &:hover {
+          color: $decorative-hover;
+        }
+
+        &::before {
+          content: "> ";
+        }
+      }
+    }
+  }
 }
