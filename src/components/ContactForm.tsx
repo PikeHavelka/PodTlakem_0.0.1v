@@ -18,9 +18,9 @@ function FooterForm() {
 
     validationSchema={
       Yup.object({
-        name: Yup.string().required("nejde to"),
-        mobileNumber: Yup.string().required(),
-        email: Yup.string().required()
+        name: Yup.string(),
+        mobileNumber: Yup.number(),
+        email: Yup.string()
       })
     }
     >

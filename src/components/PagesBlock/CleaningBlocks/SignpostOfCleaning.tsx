@@ -1,7 +1,17 @@
 import "../AllSignposts.scss"
+import { useEffect } from "react"
 
 function SignpostOfCleaning() {
-  return <div className="signpost">
+
+  useEffect(() => {
+    const signpost = document.getElementById("all-signpost")
+
+    if (signpost) {
+      signpost.scrollIntoView()
+    }
+  }, [])
+
+  return <div className="signpost" id="all-signpost">
     <div className="heading container">
       <h1 className="title">Rozcestník</h1>
       <h3 className="subtitle">Práce na solárních panelech</h3>

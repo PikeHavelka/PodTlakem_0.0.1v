@@ -2,6 +2,7 @@ import "./NavigationBar.scss"
 import logo from "../assets/images/logo.png"
 import navIcons from "../data/navIcons"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 function NavigationBar() {
   // Create UseStates
@@ -13,7 +14,7 @@ function NavigationBar() {
     setShowMenu(!showMenu)
   }
 
-  // NavBar change design function
+  // NavBar change className and design
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY !== 0) {
@@ -58,11 +59,11 @@ function NavigationBar() {
 
       <ul>
         <li>
-          <a href="#úvod">Úvod</a>
+          <a href="/#úvod" >Úvod</a>
         </li>
 
         <li>
-          <a href="#naše_služby">Naše Služby</a>
+          <a href="/#naše_služby">Naše Služby</a>
         </li>
 
         <li>
