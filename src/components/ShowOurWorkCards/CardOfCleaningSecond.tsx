@@ -1,6 +1,6 @@
 import "./CardOfCleaning.scss"
-import solar1 from "../../assets/images/plot1.jpg"
-import solar2 from "../../assets/images/plot2.jpg"
+import Strecha_cista_01 from "../../assets/images/Strecha_cista_01.jpg"
+import Strecha_spinava_01 from "../../assets/images/Strecha_spinava_01.jpg"
 import { CardProps } from "../../types/types"
 import { useRef } from "react"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
@@ -11,7 +11,7 @@ const CardOfCleaningSecond = (props: CardProps) => {
   const refCircleDivContainer = useRef<HTMLDivElement>(null)
   const refImgDivContainer = useRef<HTMLDivElement>(null)
 
-  // Current for Refs
+  // Current for Ref
   const clipDivCurrent = refClipDiv.current
   const circleDivCurrent = refCircleDivContainer.current
   const imgDivConteinerCurrent = refImgDivContainer.current
@@ -28,18 +28,23 @@ const CardOfCleaningSecond = (props: CardProps) => {
       </div>
 
       <div className="clip-path-left" ref={refClipDiv} >
-        <img src={solar1} alt="Znečistěný solární panel" />
+        <img src={Strecha_cista_01} alt="Znečistěný solární panel" />
       </div>
 
       <div className="clip-path-second">
-        <img src={solar2} alt="Čistý solární panel" />
+        <img src={Strecha_spinava_01} alt="Čistý solární panel" />
       </div>
     </div>
 
     <div className="block-of-text">
-      <h3 className="heading">Čištění kamenného plotu</h3>
+      <h3 className="heading">Čištění střešní krytiny</h3>
 
-      <p className="text">Zde jsme čistili přes 40 m kamenného plotu sestávajícího se ze ztraceného bednění. Přizpůsobili jsme technologii práce tak, aby zde nedošlo k poškození dřevěného plotu a dále nekontrolovatelnému úniku látek potřebných k ošetření do půdy či rostlin zatímto plotem i přesto že naše prostředky jsou ekologicky odbouratelné.</p>
+      <p className="text">Ukázka vyčištěné střechy, kde zákazníkem bylo požadováno vyčisti střechu od atmosferických nečistost, jako jsou mechy, lišejníky a plísně. Dále na střeše byla zaschlá špína, která byla zapříčiněna nedalekým stromem.
+      
+      <br />
+      <br />
+
+      Tato střešní krytina je stará již 20 let, nyní vypadá opět jako když se poprvé položila na střechu. Zde se postupovalo, nanesení čističe na střechu, následné opláchnutí teplou vodou a v neposlední řadě se střecha zakonzervovala impregnačním přípravkem.</p>
     </div>
   </div>
 }

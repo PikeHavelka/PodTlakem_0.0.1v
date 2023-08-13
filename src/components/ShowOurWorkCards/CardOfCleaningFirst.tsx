@@ -1,6 +1,6 @@
 import "./CardOfCleaning.scss"
-import solar1 from "../../assets/images/strecha1.jpeg"
-import solar2 from "../../assets/images/strecha2.jpg"
+import Okap_cisty_01 from "../../assets/images/Okap_cisty_01.jpg"
+import Okap_spinavy_01 from "../../assets/images/Okap_spinavy_01.jpg"
 import { CardProps } from "../../types/types"
 import { useRef } from "react"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
@@ -28,18 +28,18 @@ const CardOfCleaningFirst = (props: CardProps) => {
       </div>
 
       <div className="clip-path-left" ref={refClipDiv} >
-        <img className="img1" src={solar1} alt="Znečistěný solární panel" />
+        <img className="img1" src={Okap_cisty_01} alt="Znečistěný solární panel" />
       </div>
 
       <div className="clip-path-right">
-        <img className="img2" src={solar2} alt="Čistý solární panel" />
+        <img className="img2" src={Okap_spinavy_01} alt="Čistý solární panel" />
       </div>
     </div>
 
     <div className="block-of-text">
-      <h3 className="heading">Čištění střešní krytiny</h3>
+      <h3 className="heading">Čištění okapového žlabu</h3>
 
-      <p className="text">Přibližně 12 let stará sedlová střecha o ploše 100 m² z betonových tašek s akrylátovým nástřikem bez lesku. Zakázka byla zrealizována během jednoho dne, kde nejdříve došlo k mechanickému očištění střechy od všech nánosů, mechů a pylů. Po té došlo k chemickému odstranění mechu, lišejníku a plísní ze střechy s ohledem na daný typ střešní krytiny. Dále byla střecha naimpregnovaná neboli zakonzervována, čímž se vrátily střešní krytině její původní vlastnosti.</p>
+      <p className="text">Ukázka naší práce, zde na přání zákazníka byl kompletně vyčištěn okapový žlab, od spadaného listí, různých větviček a ostatního odpadu.</p>
     </div>
   </div>
 }

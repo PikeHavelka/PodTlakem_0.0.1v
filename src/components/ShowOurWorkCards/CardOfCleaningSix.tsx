@@ -1,11 +1,11 @@
 import "./CardOfCleaning.scss"
-import Solar_cisty_01 from "../../assets/images/Solar_cisty_01.jpg"
-import Solar_spinavy_01 from "../../assets/images/Solar_spinavy_01.jpg"
+import Strecha_cista_02 from "../../assets/images/Strecha_cista_02.jpeg"
+import Strecha_spinava_02 from "../../assets/images/Strecha_spinava_02.jpg"
 import { CardProps } from "../../types/types"
 import { useRef } from "react"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
 
-const CardOfCleaningThird = (props: CardProps) => {
+const CardOfCleaningSix = (props: CardProps) => {
   // Create Refs
   const refClipDiv = useRef<HTMLDivElement>(null)
   const refCircleDivContainer = useRef<HTMLDivElement>(null)
@@ -28,20 +28,20 @@ const CardOfCleaningThird = (props: CardProps) => {
       </div>
 
       <div className="clip-path-left" ref={refClipDiv} >
-        <img src={Solar_cisty_01} alt="Znečistěný solární panel" />
+        <img src={Strecha_cista_02} alt="Znečistěný solární panel" />
       </div>
 
       <div className="clip-path-second">
-        <img src={Solar_spinavy_01} alt="Čistý solární panel" />
+        <img src={Strecha_spinava_02} alt="Čistý solární panel" />
       </div>
     </div>
 
     <div className="block-of-text">
-      <h3 className="heading">Čištění solárních panelů</h3>
+      <h3 className="heading">Čištění střešní krytiny</h3>
 
-      <p className="text">Postavený dům byl obklopen řadou jehličnatých a listnatých stromů, které zavdaly ideálním podmínkám pro vznik nečistot jako je mech lišejník či pyl. Čímž došlo ke sníženi výkonnosti solárních panelů. Na čištění jsme využili průtokové šetrné koště za pomocí kterého jsme nanesli speciálně upravenou vodu pro maximálně šetrný účinnek včetně čistícího a impregnačního přípravku.</p>
+      <p className="text">Přibližně 12 let stará sedlová střecha o ploše 100 m² z betonových tašek s akrylátovým nástřikem bez lesku. Zakázka byla zrealizována během jednoho dne, kde nejdříve došlo k mechanickému očištění střechy od všech nánosů, mechů a pylů. Poté došlo k chemickému odstranění mechu, lišejníku a plísní ze střechy s ohledem na daný typ střešní krytiny. Dále byla střecha naimpregnovaná neboli zakonzervována, čímž se vrátily střešní krytině její původní vlastnosti.</p>
     </div>
   </div>
 }
 
-export default CardOfCleaningThird
+export default CardOfCleaningSix

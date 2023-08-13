@@ -12,6 +12,8 @@
   width: 20rem;
   background-color: $section-bg2;
   box-shadow: 5px 5px 10px $decoration;
+
+  animation: ShowHide 3s linear;
   
   .images-container {
     position: relative;
@@ -38,26 +40,26 @@
   
       &::before {
         position: absolute;
-        top: -155%;
+        top: -278%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         content: "";
 
-        height: 105px;
-        border: 2px solid #FFF;
+        height: 190px;
+        border: 2px solid white;
       }
   
       &::after {
         position: absolute;
-        top: 255%;
+        top: 378.5%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         content: "";
 
-        height: 105px;
-        border: 2px solid #FFF;
+        height: 190px;
+        border: 2px solid white;
       }
 
       .icon {
@@ -115,5 +117,14 @@
 
       @extend .heading;
     }
+  }
+}
+
+
+@keyframes ShowHide {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
   }
 }

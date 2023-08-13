@@ -1,11 +1,11 @@
 import "./CardOfCleaning.scss"
-import Solar_cisty_01 from "../../assets/images/Solar_cisty_01.jpg"
-import Solar_spinavy_01 from "../../assets/images/Solar_spinavy_01.jpg"
+import Plot_cisty_01 from "../../assets/images/Plot_cisty_01.jpg"
+import Plot_spinavy_01 from "../../assets/images/Plot_spinavy_01.jpg"
 import { CardProps } from "../../types/types"
 import { useRef } from "react"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
 
-const CardOfCleaningThird = (props: CardProps) => {
+const CardOfCleaningFive = (props: CardProps) => {
   // Create Refs
   const refClipDiv = useRef<HTMLDivElement>(null)
   const refCircleDivContainer = useRef<HTMLDivElement>(null)
@@ -28,20 +28,20 @@ const CardOfCleaningThird = (props: CardProps) => {
       </div>
 
       <div className="clip-path-left" ref={refClipDiv} >
-        <img src={Solar_cisty_01} alt="Znečistěný solární panel" />
+        <img src={Plot_cisty_01} alt="Znečistěný solární panel" />
       </div>
 
       <div className="clip-path-second">
-        <img src={Solar_spinavy_01} alt="Čistý solární panel" />
+        <img src={Plot_spinavy_01} alt="Čistý solární panel" />
       </div>
     </div>
 
     <div className="block-of-text">
-      <h3 className="heading">Čištění solárních panelů</h3>
+      <h3 className="heading">Čištění kamenného plotu</h3>
 
-      <p className="text">Postavený dům byl obklopen řadou jehličnatých a listnatých stromů, které zavdaly ideálním podmínkám pro vznik nečistot jako je mech lišejník či pyl. Čímž došlo ke sníženi výkonnosti solárních panelů. Na čištění jsme využili průtokové šetrné koště za pomocí kterého jsme nanesli speciálně upravenou vodu pro maximálně šetrný účinnek včetně čistícího a impregnačního přípravku.</p>
+      <p className="text">Zde jsme čistili přes 40 m kamenného plotu sestávajícího se ze ztraceného bednění. Přizpůsobili jsme technologii práce tak, aby zde nedošlo k poškození dřevěného plotu a dále nekontrolovatelnému úniku látek potřebných k ošetření do půdy či rostlin zatímto plotem i přesto že naše prostředky jsou ekologicky odbouratelné.</p>
     </div>
   </div>
 }
 
-export default CardOfCleaningThird
+export default CardOfCleaningFive

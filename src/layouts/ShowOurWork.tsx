@@ -2,11 +2,19 @@ import "./ShowOurWork.scss"
 import CardOfCleaningFirst from "../components/ShowOurWorkCards/CardOfCleaningFirst"
 import CardOfCleaningSecond from "../components/ShowOurWorkCards/CardOfCleaningSecond"
 import CardOfCleaningThird from "../components/ShowOurWorkCards/CardOfCleaningThird"
-import { useState, useRef } from "react"
+import CardOfCleaningFour from "../components/ShowOurWorkCards/CardOfCleaningFour"
+import CardOfCleaningFive from "../components/ShowOurWorkCards/CardOfCleaningFive"
+import CardOfCleaningSix from "../components/ShowOurWorkCards/CardOfCleaningSix"
+import { useState, useRef, useEffect } from "react"
 
 function ShowOurWork() {
   // Create useState
-  const [isDraggging, setIsDragging] = useState<boolean>()
+  const [isDraggging, setIsDragging] = useState(false)
+
+  // State for random component in ShowOurWork
+  const [randomIndex0, setRandomIndex0] = useState(0)
+  const [randomIndex1, setRandomIndex1] = useState(1)
+  const [randomIndex2, setRandomIndex2] = useState(2)
 
   // Create refs
   const refShowOurWork = useRef<HTMLDivElement>(null)
@@ -39,7 +47,7 @@ function ShowOurWork() {
   ) => {
     return (
       (e: React.MouseEvent) => {
-        if (isDraggging && clipDivCurrent && circleDivCurrent && imgDivConteinerCurrent ) {
+        if (isDraggging && clipDivCurrent && circleDivCurrent && imgDivConteinerCurrent) {
           const width = imgDivConteinerCurrent.getBoundingClientRect()
           let newValue = e.clientX - width.left - .5
 
@@ -57,6 +65,49 @@ function ShowOurWork() {
     )
   }
 
+  const components = [
+    <CardOfCleaningFirst handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />,
+
+    <CardOfCleaningSecond handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />,
+
+    <CardOfCleaningThird handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />,
+
+    <CardOfCleaningFour handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />,
+
+    <CardOfCleaningFive handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />,
+
+    <CardOfCleaningSix handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />
+  ]
+ 
+  const chooseRandomComponent = (components: JSX.Element[]) => {
+    const randomValue = Math.floor(Math.random() * 3)
+    const randomNumber = Math.floor(Math.random() * components.length)
+
+    if (randomNumber !== randomIndex0 && randomNumber !== randomIndex1 && randomNumber !== randomIndex2) {
+      if (randomValue === 0) {
+        setRandomIndex0(randomNumber)
+
+      } else if (randomValue === 1) {
+        setRandomIndex1(randomNumber)
+
+      } else if (randomValue === 2) {
+        setRandomIndex2(randomNumber)
+
+      }
+    } else {
+      chooseRandomComponent(components)
+    }
+  }
+  
+  useEffect(() => {
+    const intervalID = setInterval(() => {
+      chooseRandomComponent(components)
+
+    }, 20000)
+
+    return () => clearInterval(intervalID)
+  }, [randomIndex0, randomIndex1, randomIndex2])
+
   return <section className="show-our-work" ref={refShowOurWork}>
     <div className="container">
       <div className="header">
@@ -65,11 +116,9 @@ function ShowOurWork() {
       </div>
 
       <div className="our-work">
-        <CardOfCleaningFirst handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />
-
-        <CardOfCleaningSecond handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />
-
-        <CardOfCleaningThird handleMouseLeave={handleMouseLeave} handlePointerUp={handlePointerUp} handlePointerDown={handlePointerDown} handleMouseMoveFactory={handleMouseMoveFactory} />
+        {components[randomIndex0]}
+        {components[randomIndex1]}
+        {components[randomIndex2]}
       </div>
     </div>
   </section>
