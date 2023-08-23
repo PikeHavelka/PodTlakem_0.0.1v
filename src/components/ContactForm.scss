@@ -10,7 +10,6 @@ form {
 
   .text-inputs {
     display: flex;
-    position: relative;
     gap: 1.2rem;
 
     margin-top: 2rem;
@@ -21,12 +20,7 @@ form {
       outline: none;
 
       height: 2.5rem;
-      width: 33%;
-
-      padding: .3rem;
-
-      font-size: .9rem;
-      font-weight: 300;
+      width: 100%;
 
       color: $fourth-color;
       border-bottom: 2px solid $fourth-color;
@@ -35,7 +29,17 @@ form {
         border-bottom: 2px solid $decorative;
       }
     }
+
+    .name-field, .mobileNum-field, .email-field {
+      width: 33%;
+  
+      padding: .3rem;
+  
+      font-size: .9rem;
+      font-weight: 300;
+    }
   }
+
 
   textarea {
     display: block;
@@ -79,8 +83,21 @@ form {
     }
   }
 
+  .name-field, .mobileNum-field, .textarea-field {
+    position: relative;
+
+    font-size: .9rem;
+    font-weight: 300;
+  }
+  
   .red {
     color: red !important;
+    pointer-events: none;
+    padding-top: .2rem;
+  }
+
+  .name, .mobileNumber {
+    position: absolute;
   }
 }
 

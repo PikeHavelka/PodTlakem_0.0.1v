@@ -1,4 +1,3 @@
-
 // Brand icons
 export type BrandIcon = {
   id: number

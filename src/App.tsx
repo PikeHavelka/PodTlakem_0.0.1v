@@ -8,7 +8,6 @@ import ThePainting from "./pages/ThePainting"
 import SolarCleaning from "./pages/SolarCleaning"
 import ErrorPage from "./pages/ErrorPage"
 import { Routes, Route } from "react-router-dom"
-import { useEffect } from "react"
 
 function App() {
   return <Routes>
