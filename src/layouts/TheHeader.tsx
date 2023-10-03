@@ -19,16 +19,6 @@ function TheHeader() {
             <span className="subtitle-brake-bot"> & Natírání</span>
         </h3>
       </div>
-
-      <div className="mouse-icon">
-        <div className="wheel"></div>
-      </div>
-
-      <div className="svg-container">
-        <svg viewBox="0 0 1500 168">
-          <path d="m 0,240 h 1500 v -71 c 0,0 -286,-81 -743,-81 C 300,86 0,168 0,168 Z" />
-        </svg>
-      </div>
     </div>
   </header>
 }
