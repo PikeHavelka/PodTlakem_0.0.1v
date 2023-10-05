@@ -110,6 +110,10 @@ form {
       input:not(input[type="submit"]) {
         width: 100%;
       }
+
+      .name-field, .mobileNum-field, .email-field {
+        width: 100%;
+      }
     }
   }
 }
