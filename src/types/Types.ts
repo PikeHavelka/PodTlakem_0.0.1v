@@ -10,6 +10,11 @@ export type CardProps = {
   handlePointerDown: () => void
   handlePointerUp: () => void
   handleMouseLeave: () => void
+
+  onTouchStart: () => void
+  onTouchMove: () => void
+  onTouchEnd: () => void
+
   handleMouseMoveFactory: (
     clip: HTMLDivElement | null,
     circle: HTMLDivElement | null,
