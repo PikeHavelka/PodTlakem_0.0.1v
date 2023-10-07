@@ -18,7 +18,7 @@ const CardOfCleaningThird = (props: CardProps) => {
 
   // Destructoring of all props (only functions)
   const {
-    handleMouseLeave,
+    handlePointerLeave,
     handlePointerMoveFactory,
     handlePointerUp,
     handlePointerDown
@@ -29,10 +29,10 @@ const CardOfCleaningThird = (props: CardProps) => {
       <div
         className="images-container"
         ref={refImgDivContainer}
-        onMouseLeave={handleMouseLeave}
+        onPointerLeave={handlePointerLeave}
         onPointerUp={handlePointerUp}
 
-        onMouseMove={handlePointerMoveFactory(
+        onPointerMove={handlePointerMoveFactory(
           clipDivCurrent,
           circleDivCurrent,
           imgDivConteinerCurrent

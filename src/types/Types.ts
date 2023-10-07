@@ -9,7 +9,7 @@ export type BrandIcon = {
 export type CardProps = {
   handlePointerDown: () => void
   handlePointerUp: () => void
-  handleMouseLeave: () => void
+  handlePointerLeave: () => void
 
   handlePointerMoveFactory: (
     clip: HTMLDivElement | null,

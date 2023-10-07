@@ -34,7 +34,7 @@ function ShowOurWork() {
   }
 
   // When leave element
-  const handleMouseLeave = () => {
+  const handlePointerLeave = () => {
     setIsDragging(false);
     if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto";
   }
@@ -69,42 +69,42 @@ function ShowOurWork() {
 
   const components = [
     <CardOfCleaningFirst
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}
     />,
 
     <CardOfCleaningSecond
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}
     />,
 
     <CardOfCleaningThird
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}
     />,
 
     <CardOfCleaningFour
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}
     />,
 
     <CardOfCleaningFive
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}
     />,
 
     <CardOfCleaningSix
-      handleMouseLeave={handleMouseLeave}
+      handlePointerLeave={handlePointerLeave}
       handlePointerUp={handlePointerUp}
       handlePointerDown={handlePointerDown}
       handlePointerMoveFactory={handlePointerMoveFactory}

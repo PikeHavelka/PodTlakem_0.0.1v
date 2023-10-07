@@ -18,7 +18,7 @@ const CardOfCleaningFive = (props: CardProps) => {
 
   // Destructoring of all props (only functions)
   const {
-    handleMouseLeave,
+    handlePointerLeave,
     handlePointerMoveFactory,
     handlePointerUp,
     handlePointerDown
@@ -29,7 +29,7 @@ const CardOfCleaningFive = (props: CardProps) => {
       <div
         className="images-container"
         ref={refImgDivContainer}
-        onMouseLeave={handleMouseLeave}
+        onPointerLeave={handlePointerLeave}
         onPointerUp={handlePointerUp}
 
 
