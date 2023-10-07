@@ -11,11 +11,7 @@ export type CardProps = {
   handlePointerUp: () => void
   handleMouseLeave: () => void
 
-  onTouchStart: () => void
-  onTouchMove: () => void
-  onTouchEnd: () => void
-
-  handleMouseMoveFactory: (
+  handlePointerMoveFactory: (
     clip: HTMLDivElement | null,
     circle: HTMLDivElement | null,
     img: HTMLDivElement | null)  => (e: React.MouseEvent) => void
