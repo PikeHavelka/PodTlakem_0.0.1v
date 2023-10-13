@@ -22,25 +22,25 @@ function ShowOurWork() {
   // Current for refs
   const showOurWorkCurrent = refShowOurWork.current
 
-  // When click on element for PC
-  const handlePointerDown = () => {
-    setIsDragging(true);
-    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "none";
+  // When click on element
+  const handleMouseDown = () => {
+    setIsDragging(true)
+    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "none"
   }
 
   // When stop click on element
-  const handlePointerUp = () => {
-    setIsDragging(false);
+  const handleMouseUp = () => {
+    setIsDragging(false)
   }
 
   // When leave element
-  const handlePointerLeave = () => {
-    setIsDragging(false);
-    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto";
+  const handleMouseLeave = () => {
+    setIsDragging(false)
+    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto"
   }
 
-  // Accepts refs from cards component and change images
-  const handlePointerMoveFactory = (
+  // Accepts refs from cards component and change images (for PC)
+  const handleMouseMoveFactory = (
     clipDivCurrent: HTMLDivElement | null,
     circleDivCurrent: HTMLDivElement | null,
     imgDivConteinerCurrent: HTMLDivElement | null
@@ -53,10 +53,62 @@ function ShowOurWork() {
         imgDivConteinerCurrent
       ) {
         const width = imgDivConteinerCurrent.getBoundingClientRect()
-        let newValue = e.clientX - width.left - 0.5
+
+        let newValue: number
+        
+        newValue = e.clientX - width.left - 0.5
 
         if (newValue <= 0) {
-          newValue = 0;
+          newValue = 0
+        } else if (newValue > width.width) {
+          newValue = width.width;
+        }
+
+        clipDivCurrent.style.clipPath = `inset(0 0 0 ${newValue}px)`
+        circleDivCurrent.style.left = `${newValue}px`
+      }
+    }
+  }
+
+  // When touch on element
+  const handleTouchStart = () => {
+    setIsDragging(true)
+    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "none"
+  }
+
+  // When stop touches on element
+  const handleTouchEnd = () => {
+    setIsDragging(false)
+  }
+
+  // When stop touch element
+  const handleTouchCancel = () => {
+    setIsDragging(false)
+    if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto"
+  }
+
+
+  // Accepts refs from cards component and change images (touch devices)
+  const handleTouchMoveFactory = (
+    clipDivCurrent: HTMLDivElement | null,
+    circleDivCurrent: HTMLDivElement | null,
+    imgDivConteinerCurrent: HTMLDivElement | null
+  ) => {
+    return (e: React.TouchEvent) => {
+      if (
+        isDraggging &&
+        clipDivCurrent &&
+        circleDivCurrent &&
+        imgDivConteinerCurrent
+      ) {
+        const width = imgDivConteinerCurrent.getBoundingClientRect()
+
+        let newValue: number
+        
+        newValue = e.touches[0].clientX - width.left - 0.5
+
+        if (newValue <= 0) {
+          newValue = 0
         } else if (newValue > width.width) {
           newValue = width.width;
         }
@@ -69,45 +121,75 @@ function ShowOurWork() {
 
   const components = [
     <CardOfCleaningFirst
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
 
     <CardOfCleaningSecond
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
 
     <CardOfCleaningThird
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
 
     <CardOfCleaningFour
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
 
     <CardOfCleaningFive
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
 
     <CardOfCleaningSix
-      handlePointerLeave={handlePointerLeave}
-      handlePointerUp={handlePointerUp}
-      handlePointerDown={handlePointerDown}
-      handlePointerMoveFactory={handlePointerMoveFactory}
+      handleMouseLeave={handleMouseLeave}
+      handleMouseUp={handleMouseUp}
+      handleMouseDown={handleMouseDown}
+      handleMouseMoveFactory={handleMouseMoveFactory}
+
+      handleTouchStart={handleTouchStart}
+      handleTouchEnd={handleTouchEnd}
+      handleTouchCancel={handleTouchCancel}
+      handleTouchMoveFactory={handleTouchMoveFactory}
     />,
   ];
 

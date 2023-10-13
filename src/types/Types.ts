@@ -5,16 +5,28 @@ export type BrandIcon = {
   alt: string
 }
 
-// Show Our Work Cards - Cards Of Cleaning
+// Show Our Work Cards - Cards Of Cleaning PC
 export type CardProps = {
-  handlePointerDown: () => void
-  handlePointerUp: () => void
-  handlePointerLeave: () => void
 
-  handlePointerMoveFactory: (
+  // For PC
+  handleMouseDown: () => void
+  handleMouseUp: () => void
+  handleMouseLeave: () => void
+
+  handleMouseMoveFactory: (
     clip: HTMLDivElement | null,
     circle: HTMLDivElement | null,
     img: HTMLDivElement | null)  => (e: React.MouseEvent) => void
+
+  // Touch devices
+  handleTouchStart: () => void
+  handleTouchEnd: () => void
+  handleTouchCancel: () => void
+  
+  handleTouchMoveFactory: (
+    clip: HTMLDivElement | null,
+    circle: HTMLDivElement | null,
+    img: HTMLDivElement | null)  => (e: React.TouchEvent) => void
   }
 
   // Social icons
