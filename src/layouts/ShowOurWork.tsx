@@ -87,7 +87,6 @@ function ShowOurWork() {
     if (showOurWorkCurrent) showOurWorkCurrent.style.userSelect = "auto"
   }
 
-
   // Accepts refs from cards component and change images (touch devices)
   const handleTouchMoveFactory = (
     clipDivCurrent: HTMLDivElement | null,

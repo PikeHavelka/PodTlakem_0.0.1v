@@ -2,7 +2,6 @@ import "./NavigationBar.scss"
 import logo from "../assets/images/logo.png"
 import navIcons from "../data/navIcons"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 
 function NavigationBar() {
   // Create UseStates
